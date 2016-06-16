@@ -1,1 +1,62 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,600,600italic,700,700italic,400italic,300italic,300,800,800italic);
+
+#app {
+    background-color: #f5f5f5;
+}
+
+#app > nav {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 70px;
+    height: 100%;
+    background-color: #465660;
+}
+
+#app > nav > a {
+    display: block;
+    width: 70px;
+    text-align: center;
+    font-size: 9px;
+    text-transform: uppercase;
+    color: #B2B7BB;
+}
+#app > nav > a:hover,
+#app > nav > a:focus,
+#app > nav > a:active,
+#app > nav > a:visited {
+    text-decoration: none;
+    color: #ffffff;
+}
+#app > nav > a > span {
+    display: block;
+    font-size: 18px;
+    margin: 5px 0;
+}
+#app > nav > a.nav-logo {
+    height: 70px;
+    padding: 10px;
+}
+#app > nav > a.nav-logo > img {
+    width: 50px;
+    padding: 5px 0;
+    border-radius: 5px;
+    background-color: #ffffff;
+}
+#app > nav > a.nav-link {
+    margin: 30px 0;
+}
+#app > nav > a.nav-link.active {
+    color: #ffffff;
+}
+#app > main {
+    position: fixed;
+    left: 70px;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+#app > main > header {
+    border-bottom: solid 1px #ccc;
+    height: 70px;
+}
