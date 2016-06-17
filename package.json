@@ -2,10 +2,9 @@
   "name": "pix-editor",
   "version": "1.0.0",
   "description": "Application de gestion des tests et des épreuves de la plateforme PIX",
-  "main": "server.js",
+  "main": "index.js",
   "scripts": {
-    "dev": "",
-    "prod": "",
+    "start": "node index.js --harmony",
     "coverage": "node_modules/lab/bin/lab -c",
     "linter": "node_modules/lab/bin/lab -L",
     "test": "node_modules/lab/bin/lab -c -L -r console -o stdout -r html -o build/coverage.html"

@@ -50,6 +50,6 @@ server.register([
 
   server.start((startError) => {
     Hoek.assert(!startError, startError);
-    server.log('info', 'Server running at: ${server.info.uri}');
+    server.log('info', `Server running at: ${server.info.uri}`);
   });
 });
