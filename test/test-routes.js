@@ -1,3 +1,5 @@
+'use strict';
+
 const Code = require('code');
 const Lab = require('lab');
 const lab = exports.lab = Lab.script();
@@ -9,16 +11,20 @@ const after = lab.after;
 const expect = Code.expect;
 
 describe('math', () => {
-  before((done) => {
-    done();
-  });
 
-  after((done) => {
-    done();
-  });
+    before((done) => {
 
-  it('returns true when 1 + 1 equals 2', (done) => {
-    expect(1 + 1).to.equal(2);
-    done();
-  });
+        done();
+    });
+
+    after((done) => {
+
+        done();
+    });
+
+    it('returns true when 1 + 1 equals 2', (done) => {
+
+        expect(1 + 1).to.equal(2);
+        done();
+    });
 });
