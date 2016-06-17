@@ -17,7 +17,7 @@ body {
 }
 
 #app.disconnected .login-page {
-    margin: 80px auto;
+    margin: 120px auto;
     width: 600px;
     border: 1px solid #ccc;
     border-radius: 5px;
@@ -29,7 +29,7 @@ body {
     position: relative;
     height: 60px;
     top: -68px;
-    left: 234px;
+    left: 219px;
 }
 
 #app.disconnected .login-page .logo img {
@@ -105,8 +105,8 @@ body {
     bottom: 0;
 }
 #app.connected > main > header {
-    border-bottom: solid 1px #ccc;
     height: 70px;
+    background-color: #fff;
 }
 
 #app.connected .challenges .challenge .description:hover {

@@ -1,3 +1,3 @@
-document.addEventListener('DOMContentLoaded', function () {
-    console.log('Server is up!');
+document.addEventListener('DOMContentLoaded', () => {
+  // You can add logic here that will be executed after DOM rendered
 });
