@@ -8,7 +8,7 @@
     "prod": "",
     "coverage": "node_modules/lab/bin/lab -c",
     "linter": "node_modules/lab/bin/lab -L",
-    "test": "node_modules/lab/bin/lab"
+    "test": "node_modules/lab/bin/lab -c -L -r console -o stdout -r html -o build/coverage.html"
   },
   "repository": {
     "type": "git",
