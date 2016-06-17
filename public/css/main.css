@@ -1,10 +1,53 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,600,600italic,700,700italic,400italic,300italic,300,800,800italic);
 
-#app {
+body {
     background-color: #f5f5f5;
 }
 
-#app > nav {
+/* ------------------- */
+/* Disconnected Layout */
+/* ------------------- */
+
+#app.disconnected {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+#app.disconnected .login-page {
+    margin: 80px auto;
+    width: 600px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    padding: 15px;
+}
+
+#app.disconnected .login-page .logo {
+    position: relative;
+    height: 60px;
+    top: -68px;
+    left: 234px;
+}
+
+#app.disconnected .login-page .logo img {
+    width: 100px;
+    padding: 18px 10px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+}
+
+#app.disconnected .login-page .product-vision {
+    text-align: center;
+}
+
+/* ---------------- */
+/* Connected Layout */
+/* ---------------- */
+
+#app.connected > nav {
     position: fixed;
     left: 0;
     top: 0;
@@ -13,7 +56,7 @@
     background-color: #465660;
 }
 
-#app > nav > a {
+#app.connected > nav > a {
     display: block;
     width: 70px;
     text-align: center;
@@ -21,42 +64,51 @@
     text-transform: uppercase;
     color: #B2B7BB;
 }
-#app > nav > a:hover,
-#app > nav > a:focus,
-#app > nav > a:active,
-#app > nav > a:visited {
+#app.connected > nav > a:hover,
+#app.connected > nav > a:focus,
+#app.connected > nav > a:active {
     text-decoration: none;
     color: #ffffff;
 }
-#app > nav > a > span {
+#app.connected > nav > a > span {
     display: block;
     font-size: 18px;
     margin: 5px 0;
 }
-#app > nav > a.nav-logo {
+#app.connected > nav > a.nav-logo {
     height: 70px;
     padding: 10px;
 }
-#app > nav > a.nav-logo > img {
+#app.connected > nav > a.nav-logo > img {
     width: 50px;
     padding: 5px 0;
     border-radius: 5px;
     background-color: #ffffff;
 }
-#app > nav > a.nav-link {
+#app.connected > nav > a.nav-logout {
+    position: absolute;
+    bottom: 0;
+    margin: 0;
+}
+
+#app.connected > nav > a.nav-link {
     margin: 30px 0;
 }
-#app > nav > a.nav-link.active {
+#app.connected > nav > a.nav-link.active {
     color: #ffffff;
 }
-#app > main {
+#app.connected > main {
     position: fixed;
     left: 70px;
     right: 0;
     top: 0;
     bottom: 0;
 }
-#app > main > header {
+#app.connected > main > header {
     border-bottom: solid 1px #ccc;
     height: 70px;
+}
+
+#app.connected .challenges .challenge .description:hover {
+    cursor: pointer;
 }

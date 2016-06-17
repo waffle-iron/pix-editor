@@ -4,14 +4,19 @@ const Hapi = require('hapi');
 const Good = require('good');
 const Path = require('path');
 const Hoek = require('hoek');
+const Blipp = require('blipp');
+const Inert = require('inert');
+const Vision = require('vision');
+const Handlebars = require('handlebars');
+const Routes = require('./server/routes');
 
 const server = new Hapi.Server();
 server.connection({ port: 3000 });
 
 server.register([
-    require('blipp'),
-    require('inert'),
-    require('vision'), {
+    Blipp,
+    Inert,
+    Vision, {
         register: Good,
         options: {
             reporters: {
@@ -34,39 +39,17 @@ server.register([
 
     server.views({
         engines: {
-            html: require('handlebars')
+            html: Handlebars
         },
         relativeTo: Path.join(__dirname, 'server'),
-        path: 'views'
+        path: './views', // the directory that contains your main templates
+        layoutPath: './views/layout', // the directory that contains layout templates
+        partialsPath: './views/partials', // the directory that contains your partials (ex: header, footer, navbar, etc.)
+        helpersPath: './views/helpers', // the directory that contains your template helpers (ex: JS files)
+        layout: 'connected'
     });
 
-    server.route({
-        method: 'GET',
-        path: '/',
-        handler: {
-            view: 'index'
-        }
-    });
-
-    server.route({
-        method: 'GET',
-        path: '/{name}',
-        handler: (request, reply) => {
-
-            reply('Hello, ' + encodeURIComponent(request.params.name) + '!');
-        }
-    });
-
-    server.route({
-        method: 'GET',
-        path: '/assets/{param*}',
-        handler: {
-            directory: {
-                path: 'public',
-                listing: true
-            }
-        }
-    });
+    server.route(Routes);
 
     server.start((err) => {
 

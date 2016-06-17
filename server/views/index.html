@@ -1,40 +1,41 @@
-<!doctype html>
+<div class="login-page">
+    <div class="container-fluid">
 
-<html lang="fr">
-<head>
-    <meta charset="utf-8">
+        <div class="logo">
+            <img alt="PIX logo" src="/assets/img/logo.png" class="img-rounded">
+        </div>
 
-    <title>PIX – Editor</title>
-    <meta name="description" content="Application de gestion des tests et des épreuves de la plateforme PIX">
-    <meta name="author" content="SGMAP">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="product-vision">
+                    <p>Pour tout usager français (étudiant, salarié, retraité)</p>
+                    <p>Qui souhaite acquérir et/ou justifier de compétences numériques</p>
+                    <p>Notre plateforme digitale d’évaluation des capacités numériques</p>
+                    <p>Propose de tester et certifier de façon intelligente, exigeante et bienveillante les compétences numériques des usagers au travers d’exercices pratiques, ludiques et modernes</p>
+                    <p>Et vise à susciter l’envie de se former en continu</p>
+                </div>
+            </div>
+        </div>
 
-    <link rel="stylesheet" href="/assets/css/normalize.css">
-    <link rel="stylesheet" href="/assets/css/main.css">
-    <link rel="stylesheet" href="/assets/lib/bootstrap/css/bootstrap.css">
+        <hr/>
 
-    <!--[if lt IE 9]>
-    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-</head>
-
-<body>
-
-<div id="app">
-    <nav>
-        <a class="nav-logo" href="/"><img src="/assets/img/logo.png"></a>
-        <a class="nav-link active" href="/challenges"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span><p>Épreuves</p></a>
-        <a class="nav-link" href="/tests"><span class="glyphicon glyphicon-book" aria-hidden="true"></span><p>Tests</p></a>
-        <a class="nav-link" href="/settings"><span class="glyphicon glyphicon-cog" aria-hidden="true"></span><p>Réglages</p></a>
-        <a class="nav-link" href="/logout"><span class="glyphicon glyphicon-off" aria-hidden="true"></span><p>Quitter</p></a>
-    </nav>
-    <main>
-        <header class="main-head"></header>
-        <div class="main-body"></div>
-    </main>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="login-form">
+                    <form role="form">
+                        <div class="form-group">
+                            <label for="login">Identifiant</label>
+                            <input type="text" class="form-control" id="login" placeholder="Login ou e-mail">
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Mot de passe</label>
+                            <input type="password" class="form-control" id="password" placeholder="******">
+                        </div>
+                        <button type="submit" class="btn btn-default pull-right">Se connecter</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 
-<script src="/assets/lib/jquery/jquery.js"></script>
-<script src="/assets/lib/bootstrap/js/bootstrap.js"></script>
-<script src="/assets/js/main.js"></script>
-</body>
-</html>
