@@ -45,7 +45,6 @@ server.register([
         path: './views',
         layoutPath: './views/layout',
         partialsPath: './views/partials',
-        helpersPath: './views/helpers',
         layout: 'connected'
     });
 

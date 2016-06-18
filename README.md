@@ -36,7 +36,7 @@ pix-editor
     └ controllers           → Controller classes defining routes, handlers and requests/responses schema validation
     └ middlewares           → Middleware classes such as API (ex: AskBob or AWS S3) or DB clients
     └ models                → Model objects containing business and persistance intelligence
-    └ views                 →
+    └ views                 → Views templates (pages, layouts, partials, helpers)
         └ layout            → Page layouts templates (ex: connected.html, disconnected.html, etc.)
         └ partials          → Partials & components templates (ex: header.html, footer.html, etc.)
         └ {*}.html          → Views templates (ex: login.html, challenges.html, settings.html, etc.)
